@@ -264,6 +264,7 @@ class Gallery extends Component {
             tileViewportStyle={this.props.tileViewportStyle}
             thumbnailStyle={this.props.thumbnailStyle}
             thumbnailImageComponent={this.props.thumbnailImageComponent}
+            classNamePrefix={this.props.classNamePrefix}
                 />;});
         var resizeIframeStyles = {
             height: 0,
@@ -364,7 +365,8 @@ Gallery.propTypes = {
     showLightboxThumbnails: PropTypes.bool,
     onClickLightboxThumbnail: PropTypes.func,
     tagStyle: PropTypes.object,
-    thumbnailImageComponent: PropTypes.func
+    thumbnailImageComponent: PropTypes.func,
+    classNamePrefix: PropTypes.string,
 };
 
 Gallery.defaultProps = {
@@ -383,6 +385,7 @@ Gallery.defaultProps = {
     showImageCount: true,
     lightboxWidth: 1024,
     showLightboxThumbnails: false,
+    classNamePrefix: "grid-gallery",
 };
 
 module.exports = Gallery;
