@@ -323,7 +323,7 @@ Gallery.propTypes = {
             caption: PropTypes.string,
             tags: PropTypes.arrayOf(
                 PropTypes.shape({
-                    value: PropTypes.string.isRequired,
+                    value: PropTypes.any.isRequired,
                     title: PropTypes.string.isRequired
                 })
             ),

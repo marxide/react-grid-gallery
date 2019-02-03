@@ -158,7 +158,7 @@ class Image extends Component {
                     style={{display: "inline-block",
                             cursor: 'pointer',
                             pointerEvents: 'visible',
-                            margin: "2px"}}>
+                            }}>
                         <span style={this.tagStyle()}>{tag.value}</span>
                         </div>;
                 });
