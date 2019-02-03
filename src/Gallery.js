@@ -260,6 +260,7 @@ class Gallery extends Component {
             isSelectable={this.props.enableImageSelection}
             onClick={this.getOnClickThumbnailFn()}
             onSelectImage={this.onSelectImage}
+            tagContainerStyle={this.props.tagContainerStyle}
             tagStyle={this.props.tagStyle}
             tileViewportStyle={this.props.tileViewportStyle}
             thumbnailStyle={this.props.thumbnailStyle}
@@ -364,6 +365,7 @@ Gallery.propTypes = {
     thumbnailStyle: PropTypes.func,
     showLightboxThumbnails: PropTypes.bool,
     onClickLightboxThumbnail: PropTypes.func,
+    tagContainerStyle: PropTypes.object,
     tagStyle: PropTypes.object,
     thumbnailImageComponent: PropTypes.func,
     classNamePrefix: PropTypes.string,

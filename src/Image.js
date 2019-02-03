@@ -11,6 +11,21 @@ class Image extends Component {
         };
     }
 
+    tagContainerStyle () {
+        if (this.props.tagContainerStyle)
+            return this.props.tagContainerStyle;
+        return {
+            padding: "2px",
+            pointerEvents: "none",
+            position: "absolute",
+            minHeight: "0px",
+            maxHeight: "160px",
+            width: "100%",
+            bottom: "0px",
+            overflow: "hidden"
+        };
+    }
+
     tagStyle () {
         if (this.props.tagStyle)
             return this.props.tagStyle;
@@ -197,16 +212,7 @@ class Image extends Component {
 
                 <div className={this.props.classNamePrefix+"-tile-bottom-bar"}
             key={"tile-bottom-bar-"+this.props.index}
-            style={{
-                padding: "2px",
-                pointerEvents: "none",
-                position: "absolute",
-                minHeight: "0px",
-                maxHeight: "160px",
-                width: "100%",
-                bottom: "0px",
-                overflow: "hidden"
-            }}>
+            style={this.tagContainerStyle()}>
                 {tags}
             </div>
 
@@ -265,6 +271,7 @@ Image.propTypes = {
     onSelectImage: PropTypes.func,
     tileViewportStyle: PropTypes.func,
     thumbnailStyle: PropTypes.func,
+    tagContainerStyle: PropTypes.object,
     tagStyle: PropTypes.object,
     customOverlay: PropTypes.element,
     thumbnailImageComponent: PropTypes.func,
